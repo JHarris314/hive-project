@@ -27,7 +27,7 @@
 #define STATUS_REG     0x27
 
 //Define register values (LIS3DH)
-#define CTRL1_VAL	     0x97 //3-axis; HR
+#define CTRL1_VAL	     0x97 //3-axis; High Res.
 #define CTRL3_VAL      0x10 //INT1 enable
 #define CTRL4_VAL      0x08 //HR mode
 #define CTRL6_VAL      0x02 //INT1 is active low
