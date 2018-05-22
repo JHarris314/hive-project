@@ -166,9 +166,7 @@ int main()
 				accelerometer.update();
 			} 
 		
-			//
-			temp_z = (accelerometer.z >> 4) & 0x0FFF; //Shift to right align and ensure upper nibble is 0x0
-			
+			temp_z = (accelerometer.z >> 4) & 0x0FFF; //Shift to right align and ensure upper nibble is 0x0	
 			
 			//If the sign bit is present, make the sign bit a 0. Make the upper byte
 			// all 1 to represent the two's complement correctly
