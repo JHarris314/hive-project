@@ -1,0 +1,27 @@
+//Bryan Gardner
+//5-23-18
+
+
+
+//for developing the filter, specifically for making the coefficients of the filter.
+cheb1 = designfilt('bandpassiir', 'FilterOrder', 12, 'PassbandFrequency1', 210, 'PassbandFrequency2', 397, 'PassbandRipple', 1, 'SampleRate', 1275);
+
+
+//for plotting data from an input file and comparing it to plotted data in an output file.
+Fs = 1157 % samples per second;
+N = 4096;
+dF = Fs/4096;
+f = -Fs/2:dF:Fs/2-dF;
+Y = fftshift(fft(output));
+figure;
+plot(f,abs(Y)/N); %magnitude plot of the fft of filtered data.
+xlabel('Frequency (in hertz)');
+title('Magnitude Response');Fs = 1344 % samples per second;
+N = 4096;
+dF = Fs/4096;
+f = -Fs/2:dF:Fs/2-dF;
+Y = fftshift(fft(input));
+figure;
+plot(f,abs(Y)/N); %magnitude plot of the fft of filtered data.
+xlabel('Frequency (in hertz)');
+title('Magnitude Response');
